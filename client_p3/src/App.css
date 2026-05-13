@@ -1,0 +1,126 @@
+/* src/App.css */
+:root {
+  --primary: #4f46e5;       /* Indigo */
+  --primary-hover: #4338ca;
+  --secondary: #10b981;     /* Emerald Green */
+  --danger: #ef4444;        /* Red */
+  --background: #fffffff6;    /* Light Gray */
+  --card-bg: #ffffff;
+  --text-main: #1f2937;
+  --text-light: #6b7280;
+  --border: #e5e7eb;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--text-main);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Layout Wrappers --- */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* --- Cards --- */
+.card, form, .dashboard-box {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 30px;
+  margin-bottom: 25px;
+  border: 1px solid var(--border);
+}
+
+h2, h3 {
+  color: #111827;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+h2 { font-size: 1.8rem; margin-bottom: 1.5rem; }
+h3 { font-size: 1.25rem; margin-bottom: 1rem; }
+
+/* --- Inputs & Selects --- */
+input, select {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 8px 0 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.2s;
+  box-sizing: border-box; /* Fixes width issues */
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+label {
+  font-weight: 500;
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+/* --- Buttons --- */
+button {
+  background-color: var(--primary);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.2s;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* --- Special Button Variants --- */
+button.danger { background-color: var(--danger); }
+button.success { background-color: var(--secondary); }
+
+/* --- Navbar / Header --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  background: white;
+  padding: 15px 30px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* --- Status Badges --- */
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: #e5e7eb;
+}
+.badge.green { background: #d1fae5; color: #065f46; }
+.badge.blue { background: #dbeafe; color: #1e40af; }
+
